@@ -1,5 +1,5 @@
 import { Image, FlatList } from "react-native";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
@@ -9,9 +9,11 @@ import logoImg from "../../assets/logo-nlw-esports.png";
 import { Heading } from "../../components/Heading";
 import { GameCard, GameCardProps } from "../../components/GameCard";
 import { Background } from "../../components/Background";
+import { SignInContext } from "../../context/SignInContext";
 
 export function Home() {
   const [games, setGames] = useState<GameCardProps[]>([]);
+  const { user } = useContext(SignInContext);
 
   const navigation = useNavigation();
 
@@ -20,7 +22,7 @@ export function Home() {
   }
 
   useEffect(() => {
-    fetch("http://192.168.0.186:3333/games")
+    fetch("https://app-ignite-backend.herokuapp.com/games")
       .then((response) => response.json())
       .then((data) => setGames(data));
   }, []);
@@ -30,7 +32,7 @@ export function Home() {
       <SafeAreaView style={styles.container}>
         <Image source={logoImg} style={styles.logo} />
         <Heading
-          title="Encontre seu duo!"
+          title={`Bem-vindo ${user}`}
           subtitle="Selecione o game que deseja jogar..."
         />
         <FlatList

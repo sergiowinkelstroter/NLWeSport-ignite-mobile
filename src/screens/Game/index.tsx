@@ -29,13 +29,13 @@ export function Game() {
   }
 
   async function getDiscordUser(adsID: string) {
-    await fetch(`http://192.168.0.186:3333/ads/${adsID}/discord`)
+    await fetch(`https://app-ignite-backend.herokuapp.com/ads/${adsID}/discord`)
       .then((response) => response.json())
       .then((data) => setDiscordDuoSelected(data.discord));
   }
 
   useEffect(() => {
-    fetch(`http://192.168.0.186:3333/games/${game.id}/ads`)
+    fetch(`https://app-ignite-backend.herokuapp.com/games/${game.id}/ads`)
       .then((response) => response.json())
       .then((data) => setInfo(data));
   }, []);
