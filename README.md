@@ -36,10 +36,6 @@ Aqui estão as tecnologias usadas neste projeto.
 ![game](https://github.com/sergiowinkelstroter/NLWeSport-ignite-mobile/blob/main/assets/game.jpeg)
 ![add discord](https://github.com/sergiowinkelstroter/NLWeSport-ignite-mobile/blob/main/assets/add.jpeg)
 
-### 4 - Or you can see my personal Portfolio.
-
-![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_1.png)
-![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_2.png)
 
 
 
